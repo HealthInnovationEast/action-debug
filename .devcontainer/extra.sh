@@ -16,11 +16,5 @@ sudo rm -rf /tmp/gitflow
 set +e
 # this fails if unstaged changes, however they should only exist when resuming
 git hf init -f
-hash nextflow >& /dev/null || (
-    cd /tmp
-    curl -s https://get.nextflow.io | bash
-    mkdir -p $HOME/.local/bin
-    mv nextflow $HOME/.local/bin/
-)
 
 exit 0
